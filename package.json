@@ -1,0 +1,23 @@
+{
+  "name": "isstrackerinfo",
+  "version": "1.0.0",
+  "description": "A web app that shows the position of the ISS on a map with additional info",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ForeverThinking/ISSTrackerInfo.git"
+  },
+  "author": "Mark Dixon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ForeverThinking/ISSTrackerInfo/issues"
+  },
+  "homepage": "https://github.com/ForeverThinking/ISSTrackerInfo#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1"
+  }
+}
