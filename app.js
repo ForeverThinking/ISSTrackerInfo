@@ -13,7 +13,9 @@ const app = express();
 app.set('view engine', 'ejs');
 
 // set CSS file location
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
 app.use(express.static('public'));
 
 // set home route
@@ -38,6 +40,9 @@ app.get('/', (req, res) => {
     let numberOfPeople = data.number;
     let listOfPeople = data.people; // use item.name when using forEach
   });
+
+  res.render('home');
+
 });
 
 // set server listening
