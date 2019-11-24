@@ -4,12 +4,17 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const request = require('request');
+const ejs = require('ejs');
 
 // initialise express app
 const app = express();
 
+// use ejs view system
+app.set('view engine', 'ejs');
+
 // set CSS file location
-app.use(express.static("public"));
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(express.static('public'));
 
 // set home route
 app.get('/', (req, res) => {
