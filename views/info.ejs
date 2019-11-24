@@ -1,0 +1,13 @@
+<%- include('partials/header'); -%>
+
+<p>The number of astronauts and cosmonauts on board are <%= numberOfPeople %></p>
+
+<p>They are:</p>
+<ul>
+  <% listOfPeople.forEach((item) => { %>
+    <li> <%= item.name %> </li>
+  <% }); %>
+</ul>
+
+
+<%- include('partials/footer'); -%>

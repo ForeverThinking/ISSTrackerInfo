@@ -12,7 +12,7 @@ const app = express();
 // use ejs view system
 app.set('view engine', 'ejs');
 
-// set CSS file location
+// set CSS file location and bodyparser setup
 app.use(bodyParser.urlencoded({
   extended: true
 }));
@@ -20,6 +20,10 @@ app.use(express.static('public'));
 
 // set home route
 app.get('/', (req, res) => {
+  res.render('home');
+});
+
+app.get('/map', (req, res) => {
 
   // GET request for current ISS location
   request("http://api.open-notify.org/iss-now.json", (error, response, body) => {
@@ -29,7 +33,17 @@ app.get('/', (req, res) => {
     // get latitude and longitude data
     let issLatitude = locationData.iss_position.latitude;
     let issLongitude = locationData.iss_position.longitude;
+
+    // NEED TO CHANGE ROUTING FOR MAP
+    res.render('map', {
+      issLatitude: issLatitude,
+      issLongitude: issLongitude
+    });
   });
+
+});
+
+app.get('/info', (req, res) => {
 
   // GET request for People in Space API
   request('http://api.open-notify.org/astros.json', (error, response, body) => {
@@ -39,9 +53,13 @@ app.get('/', (req, res) => {
     // get number of people and list of names from data
     let numberOfPeople = data.number;
     let listOfPeople = data.people; // use item.name when using forEach
-  });
 
-  res.render('home');
+    // NEED TO CHANGE ROUTING FOR INFORMATION
+    res.render('info', {
+      numberOfPeople: numberOfPeople,
+      listOfPeople: listOfPeople
+    });  
+  });
 
 });
 
