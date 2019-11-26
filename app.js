@@ -34,7 +34,7 @@ app.get('/map', (req, res) => {
     let issLatitude = locationData.iss_position.latitude;
     let issLongitude = locationData.iss_position.longitude;
 
-    // NEED TO CHANGE ROUTING FOR MAP
+    // render map page and send data to use
     res.render('map', {
       issLatitude: issLatitude,
       issLongitude: issLongitude
@@ -54,11 +54,11 @@ app.get('/info', (req, res) => {
     let numberOfPeople = data.number;
     let listOfPeople = data.people; // use item.name when using forEach
 
-    // NEED TO CHANGE ROUTING FOR INFORMATION
+    // render info page and send data to use
     res.render('info', {
       numberOfPeople: numberOfPeople,
       listOfPeople: listOfPeople
-    });  
+    });
   });
 
 });
