@@ -1,13 +1,29 @@
 <%- include('partials/header'); -%>
 
-<p>The number of astronauts and cosmonauts on board are <%= numberOfPeople %></p>
+<p class="info-text">
+  The International Space Station, or ISS, is a multi-national scientific project
+  that provides a microgravity and space environment laboratory, observatory, and potential
+  staging post for future, more ambitious, missions. Initially launched in November 1998,
+  the ISS began with just a single module, the Zarya. Since then, it has grown into
+  a formidable feat of collaborative engineering, scientific, and political achievement.
+</p>
 
-<p>They are:</p>
-<ul>
-  <% listOfPeople.forEach((item) => { %>
-    <li> <%= item.name %> </li>
-  <% }); %>
-</ul>
+<p class="info-text">To learn more about this amazing mission, visit the ISS page at <a class="nasa-link" href="https://www.nasa.gov/mission_pages/station/main/index.html" target="_blank" rel="noreferrer noopener">NASA</a></p>
+
+<p class="info-text">
+  Currently there are <%= numberOfPeople %> astronauts and cosmonauts on board, and these
+  amazing men and women are:
+</p>
+
+<div class="d-flex justify-content-center">
+  <ul class="people-list">
+    <% listOfPeople.forEach((item) => { %>
+      <li> <%= item.name %> </li>
+    <% }); %>
+  </ul>
+</div>
+
+
 
 
 <%- include('partials/footer'); -%>

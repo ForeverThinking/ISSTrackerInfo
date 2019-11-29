@@ -101,3 +101,23 @@ body {
 .mastfoot {
   color: rgba(255, 255, 255, .5);
 }
+
+/* Info Page */
+
+/* Info text */
+.info-text {
+  text-align: justify;
+}
+
+.nasa-link {
+  color: #fc3d21;
+}
+
+.nasa-link:visited {
+  color: #4f86e3;
+}
+
+/* People list */
+.people-list {
+  text-align: left;
+}
