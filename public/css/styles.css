@@ -1,7 +1,4 @@
-/*
- * Globals
- */
-/* Links */
+/* Global */
 a,
 a:focus,
 a:hover {
@@ -19,9 +16,7 @@ a:hover {
   border: .05rem solid #fff;
 }
 
-/*
- * Base structure
- */
+/* Base structure */
 body {
   display: -ms-flexbox;
   display: flex;
@@ -51,9 +46,7 @@ body {
   max-width: 42em;
 }
 
-/*
- * Header
- */
+/* Header */
 .masthead {
   margin-bottom: 2rem;
 }
@@ -94,9 +87,7 @@ body {
   }
 }
 
-/*
- * Cover
- */
+/* Cover */
 .cover {
   padding: 0 1.5rem;
 }
@@ -106,9 +97,7 @@ body {
   font-weight: 700;
 }
 
-/*
- * Footer
- */
+/* Footer */
 .mastfoot {
   color: rgba(255, 255, 255, .5);
 }
