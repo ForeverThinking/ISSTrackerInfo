@@ -121,3 +121,10 @@ body {
 .people-list {
   text-align: left;
 }
+
+/* Map page */
+
+#mapid {
+  height: 75vh;
+  width: 90vw;
+}
