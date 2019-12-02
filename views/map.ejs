@@ -14,9 +14,11 @@
   L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
     attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community',
     maxZoom: 4
-}).addTo(mymap);
-</script>
+  }).addTo(mymap);
 
-<p>ISS Latitude is <%= issLatitude %> and longitude is <%= issLongitude %></p>
+  var marker = L.marker([ <%= issLatitude %> , <%= issLongitude %> ]).addTo(mymap);
+
+  mymap.panTo([<%= issLatitude %> , <%= issLongitude %>], animate=true);
+</script>
 
 <%- include('partials/footer'); -%>
