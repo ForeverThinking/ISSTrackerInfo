@@ -23,6 +23,7 @@ app.get('/', (req, res) => {
   res.render('home');
 });
 
+// set map route
 app.get('/map', (req, res) => {
 
   // GET request for current ISS location
@@ -43,6 +44,7 @@ app.get('/map', (req, res) => {
 
 });
 
+// set info route
 app.get('/info', (req, res) => {
 
   // GET request for People in Space API
