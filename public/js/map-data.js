@@ -22,10 +22,11 @@ let mymap = L.map('mapid').setView([0, 0], 3);
 
 // add tile layer to map
 L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
-  attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community',
+  attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community. Marker icon made by Freepik from www.flaticon.com',
   maxZoom: 4
 }).addTo(mymap);
 
+// add icon information
 let myIcon = L.icon({
     iconUrl: '/img/space-station.png',
     iconSize: [48, 48],
