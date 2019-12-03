@@ -23,26 +23,12 @@ app.get('/', (req, res) => {
   res.render('home');
 });
 
+// set map route
 app.get('/map', (req, res) => {
-
-  // GET request for current ISS location
-  request("http://api.open-notify.org/iss-now.json", (error, response, body) => {
-    // parse data
-    let locationData = JSON.parse(body);
-
-    // get latitude and longitude data
-    let issLatitude = locationData.iss_position.latitude;
-    let issLongitude = locationData.iss_position.longitude;
-
-    // render map page and send data to use
-    res.render('map', {
-      issLatitude: issLatitude,
-      issLongitude: issLongitude
-    });
-  });
-
+  res.render('map');
 });
 
+// set info route
 app.get('/info', (req, res) => {
 
   // GET request for People in Space API
