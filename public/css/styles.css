@@ -46,9 +46,21 @@ body {
   max-width: 42em;
 }
 
-@media (min-width :600px) and (max-width: 750px) {
+@media (min-width: 600px) and (max-width: 750px) {
   .backImg, body {
-    height: 75vmax;
+    height: 80vmax;
+  }
+}
+
+@media (min-width: 751px) and (max-width: 800px) {
+  .backImg, body {
+    height: 100vmax;
+  }
+}
+
+@media (min-width: 801px) and (max-width: 850px) {
+  .backImg, body {
+    height: 80vmax;
   }
 }
 
@@ -120,7 +132,15 @@ body {
 }
 
 .nasa-link:visited {
-  color: #4f86e3;
+  color: #0098DB;
+}
+
+.esa-link {
+  color: #E37222;
+}
+
+.esa-link:visited {
+  color: #0098DB;
 }
 
 @media (max-width: 750px) {
@@ -137,6 +157,13 @@ body {
 /* Map page */
 
 #mapid {
-  height: 75vh;
+  height: 70vh;
   width: 90vw;
+}
+
+@media (min-width: 801px) and (max-width: 850px) {
+  #mapid {
+    height: 90vh;
+    width: 90vw;
+  }
 }
